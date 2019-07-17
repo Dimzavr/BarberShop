@@ -5,9 +5,10 @@ require 'sqlite3'
 
 
 def get_db
-	return SQLite3::Database.new 'BarberShop.db'
-
-end	
+  db = SQLite3::Database.new 'base.db'
+  db.results_as_hash = true
+  return db
+end
 
 configure do 
 	db = get_db
@@ -63,3 +64,6 @@ post '/visit' do
 
 end
 
+get '/showusers' do
+	erb "hello world"
+end	
