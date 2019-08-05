@@ -65,5 +65,5 @@ post '/visit' do
 end
 
 get '/showusers' do
-	erb "hello world"
+	erb :showusers
 end	
