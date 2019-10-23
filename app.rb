@@ -85,7 +85,7 @@ post '/visit' do
 	db.execute 'insert into Users (username,phone,datestamp,barber,color)values (?,?,?,?,?)',[@username, @phone,
 		@datetime, @barber, @color]
 
-	erb "OK, username is #{@username}, #{@phone}, #{@datetime}, #{@barber}, #{@color}"
+		erb "<h2>Спасибо, вы записались!</h2>"
 
 end
 
